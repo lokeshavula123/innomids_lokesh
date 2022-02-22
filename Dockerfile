@@ -3,5 +3,5 @@ RUN mkdir /app
 ADD . /app
 WORKDIR /app
 RUN /usr/local/bin/python -m pip install --upgrade pip
-RUN pip install -r requirements.txt
+RUN /bin/sh -c pip install -r requirements.txt
 CMD ["python", "main.py"]
